@@ -1,3 +1,6 @@
+// Assignment 2 - deadline 17 Oktober 2021 23:59
+// Library java program
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,13 +36,13 @@ public class App {
         // System.out.println(parisLondon);
         // System.out.println("----------------------------");
 
-        // show list of current books list
+        // show list of current books list (retrieve book list)
         System.out.println("\r\nList of Book");
         System.out.println("----------------------------");
         library.getBookList().stream().forEach(System.out::println);
         System.out.println("----------------------------");
 
-        // add book and show updated books list
+        // add book and show updated books list (retrieve update booklist)
         List<Author> authListAbout = new ArrayList<Author>(); // case of ArrayList
         authListAbout.add(gOrwell);
 
@@ -82,17 +85,13 @@ public class App {
         System.out.println("----------------------------");
         System.out.println("Filter Case 1: Title");
         System.out.println("----------------------------");
-        // library.findBook("Title", "Animal Farm").stream().forEach(System.out::println);
-        library.findBook("Title", "Animal Farm");
-
+        library.findBook("Title", "Animal Farm").stream().forEach(System.out::println);
+        
         System.out.println("----------------------------");
         System.out.println("Filter Case 2: Author");
         System.out.println("----------------------------");
-        library.findBook("Author", "Eric A. Blair");
-        // library.findBook("Author", "George Orwell");
-
-        // library.findBook("Author", "Eric A. Blair").stream().forEach(System.out::println);
-        // // library.findBook("Author", "George Orwell").stream().forEach(System.out::println);
+        library.findBook("Author", "Eric A. Blair").stream().forEach(System.out::println);
+        // library.findBook("Author", "George Orwell").stream().forEach(System.out::println);
         
     }
 }

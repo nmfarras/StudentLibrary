@@ -52,25 +52,20 @@ public class Library {
         .collect(Collectors.toList());
     }
 
-   public void findBook(String criteria, String param){
+   public List<Book> findBook(String criteria, String param){
        if (criteria=="Title") {
            List<Book> searchList = this.bookList.stream()
            .filter(currentBook->currentBook.getBookTitle()==param)
            .collect(Collectors.toList());
-           System.out.println("There are "+ searchList.size() 
-           + " entry(ies) with keyword '" + param +"' "
-           + " for category '" + criteria +"'/r/n");
-           searchList.stream().forEach(System.out::println);
+           return searchList;
        } else {
            List<Book> searchList = this.bookList.stream()
            .filter(currentBook->currentBook.getAuthList().stream()
              .anyMatch(auth -> auth.getAuthName().equals(param)))
            .collect(Collectors.toList());
-           System.out.println("There are "+ searchList.size() 
-           + " entry(ies) with keyword '" + param +"' "
-           + " for category '" + criteria +"'/r/n");
-           searchList.stream().forEach(System.out::println);
+           return searchList;
        }
-   }
+   } 
 
+   
 }
