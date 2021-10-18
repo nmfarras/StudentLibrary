@@ -46,7 +46,7 @@ public class App {
         List<Author> authListAbout = new ArrayList<Author>(); // case of ArrayList
         authListAbout.add(gOrwell);
 
-        Book aboutItAbout = new Book("About It and about", authListAbout, "12 August 1939");
+        Book aboutItAbout = new Book("About It and About", authListAbout, "12 August 1939");
 
         library.addBook(aboutItAbout); // add book
 
